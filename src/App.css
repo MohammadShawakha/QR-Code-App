@@ -8,8 +8,6 @@ div#root {
   align-items: center;
 
   height: 100dvh;
-  font-size: 3rem;
-  color: black;
 
   background-color: #ffffff;
   opacity: 1;
@@ -64,11 +62,6 @@ div#root {
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
-div.qrBox {
-  border: 3px solid black;
-  border-radius: 5px;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -78,17 +71,54 @@ div.qrBox {
   width: max(25%, 300px);
   height: auto;
 
-  padding: 5%;
+  padding: min(2%, 1rem) min(4%, 2rem);
 
   border: 3px solid black;
   border-radius: 5px;
 }
+
+div.container p {
+  font-size: 3rem;
+  color: black;
+
+  margin-top: 0px;
+  margin-bottom: 1em;
+}
+
+.text-box {
+  outline: none;
+  margin-bottom: 1rem;
+  resize: none;
+  height: 60px;
+  width: 292px;
+}
+
+div.qrBox {
+  border: 3px solid black;
+  border-radius: 5px;
+  height: 288px;
+  width: 288px;
+}
+
 .qrCode {
   margin: 1rem;
 }
-.text-box {
-  outline: none;
-  margin-bottom: 5%;
-  height: 60px;
-  width: 292px;
+
+div.color-input label {
+  display: block;
+  width: min-content;
+  margin-right: 0.5rem;
+}
+
+div.color-input {
+  display: flex;
+
+  justify-content: space-between;
+  margin: 1rem 0px;
+}
+div.color-input div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
 }

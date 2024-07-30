@@ -1,15 +1,21 @@
 import { useState, useContext, useEffect } from "react";
 import "./App.css";
-import { Context } from "./App";
+import { QrContext } from "./App";
 
 function InputCom() {
-  const [qrText, setQrText] = useContext(Context);
+  const [qrState, setQrState] = useContext(QrContext);
   const [inputText, setInputText] = useState("");
   const inputChanged = (e) => {
     setInputText(e.target.value);
   };
   useEffect(() => {
-    const timeoutId = setTimeout(() => setQrText(inputText), 700);
+    const timeoutId = setTimeout(() => {
+      const temp = {
+        ...qrState,
+      };
+      temp.text = inputText;
+      setQrState(temp);
+    }, 700);
     return () => clearTimeout(timeoutId);
   }, [inputText]);
 

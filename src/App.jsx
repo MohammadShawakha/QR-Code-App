@@ -3,18 +3,25 @@ import QrGenaretor from "./qrGenaretor.jsx";
 import InputCom from "./input.jsx";
 import React from "react";
 import { useState } from "react";
+import ColorInput from "./color-input.jsx";
 
-export const Context = React.createContext();
+export const QrContext = React.createContext();
 function App() {
-  const [qrText, setQrText] = useState("");
+  const [qrState, setQrState] = useState({
+    text: "",
+    primaryColor: "#000000",
+    secondaryColor: "#ffffff",
+  });
+
   return (
-    <Context.Provider value={[qrText, setQrText]}>
+    <QrContext.Provider value={[qrState, setQrState]}>
       <div className="container">
         <p>QR Code</p>
         <InputCom />
         <QrGenaretor />
+        <ColorInput />
       </div>
-    </Context.Provider>
+    </QrContext.Provider>
   );
 }
 
