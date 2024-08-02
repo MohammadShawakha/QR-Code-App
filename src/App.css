@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 div#root {
@@ -62,6 +63,7 @@ div#root {
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -94,14 +96,12 @@ div.container p {
 }
 
 div.qrBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid black;
   border-radius: 5px;
-  height: 288px;
-  width: 288px;
-}
-
-.qrCode {
-  margin: 1rem;
+  padding: 1rem;
 }
 
 div.color-input label {
@@ -116,9 +116,22 @@ div.color-input {
   justify-content: space-between;
   margin: 1rem 0px;
 }
+
 div.color-input div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 0.5rem;
+}
+.Download {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border: 3px solid black;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.Download:hover {
+  background-color: #28a745;
+  color: #ffffff;
 }

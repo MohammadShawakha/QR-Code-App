@@ -23,7 +23,7 @@ function ColorInput() {
   return (
     <div className="color-input">
       <div>
-        <label for="primary-color">Primary Color : </label>
+        <label htmlFor="primary-color">Primary Color : </label>
         <input
           type="color"
           value={qrState.primaryColor}
@@ -31,7 +31,7 @@ function ColorInput() {
         ></input>
       </div>
       <div>
-        <label for="secondary-color">Secondary Color : </label>
+        <label htmlFor="secondary-color">Secondary Color : </label>
         <input
           type="color"
           value={qrState.secondaryColor}
