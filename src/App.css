@@ -131,7 +131,13 @@ div.color-input div {
   font-size: 1rem;
   font-weight: bold;
 }
-.Download:hover {
+.Download:hover:enabled {
   background-color: #28a745;
   color: #ffffff;
+  transition: 0.5s;
+}
+.Download:disabled {
+  background-color: lightgray;
+
+  transition: 0.5s;
 }

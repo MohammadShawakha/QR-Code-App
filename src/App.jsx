@@ -4,6 +4,7 @@ import InputCom from "./input.jsx";
 import React from "react";
 import { useState, useRef } from "react";
 import ColorInput from "./color-input.jsx";
+import DownloadBtn from "./download-btn.jsx";
 import html2canvas from "html2canvas";
 
 export const QrContext = React.createContext();
@@ -21,10 +22,8 @@ function App() {
         let image = canvas.toDataURL("image/jpeg");
         const a = document.createElement("a");
         a.href = image;
-
         a.download = "QR-Code.jpeg";
         a.click();
-
         //document.body.appendChild(canvas);
       })
       .catch((err) => {
@@ -38,9 +37,7 @@ function App() {
         <InputCom />
         <QrGenaretor ref={qrRef} />
         <ColorInput />
-        <button className="Download" onClick={handleClick}>
-          Download
-        </button>
+        <DownloadBtn className="Download" handleClick={handleClick} />
       </div>
     </QrContext.Provider>
   );
