@@ -1,7 +1,4 @@
-# QR-Code-App
+# ReactJS QR Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
+a simple ReactJS QR generator app
 - [Try the app ](https://mohammadshawakha.github.io/QR-Code-App/) 
